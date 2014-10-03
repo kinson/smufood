@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2265474F19D8B5A30022F3A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265474E19D8B5A30022F3A0 /* AppDelegate.swift */; };
+		2265475119D8B5A30022F3A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265475019D8B5A30022F3A0 /* ViewController.swift */; };
+		2265475419D8B5A30022F3A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2265475219D8B5A30022F3A0 /* Main.storyboard */; };
+		2265475619D8B5A30022F3A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2265475519D8B5A30022F3A0 /* Images.xcassets */; };
+		2265475919D8B5A30022F3A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2265475719D8B5A30022F3A0 /* LaunchScreen.xib */; };
+		2265476519D8B5A30022F3A0 /* smufoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265476419D8B5A30022F3A0 /* smufoodTests.swift */; };
+		227EB80D19D8EDD70003D758 /* OpenHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EB80C19D8EDD70003D758 /* OpenHours.swift */; };
+		227EB80F19D8F1280003D758 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EB80E19D8F1280003D758 /* FirebaseHelper.swift */; };
+		227EB81119D8F3890003D758 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 227EB81019D8F3890003D758 /* libicucore.dylib */; };
+		227EB81319D8F3960003D758 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 227EB81219D8F3960003D758 /* libc++.dylib */; };
+		227EB81519D8F39F0003D758 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227EB81419D8F39F0003D758 /* CFNetwork.framework */; };
+		227EB81719D8F3AA0003D758 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227EB81619D8F3AA0003D758 /* Security.framework */; };
+		227EB81919D8F3B50003D758 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227EB81819D8F3B50003D758 /* SystemConfiguration.framework */; };
+		227EB81B19D8F4CF0003D758 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227EB81A19D8F4CF0003D758 /* Firebase.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2265475F19D8B5A30022F3A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2265474119D8B5A30022F3A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2265474819D8B5A30022F3A0;
+			remoteInfo = smufood;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2265474919D8B5A30022F3A0 /* smufood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smufood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2265474D19D8B5A30022F3A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2265474E19D8B5A30022F3A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2265475019D8B5A30022F3A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2265475319D8B5A30022F3A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2265475519D8B5A30022F3A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2265475819D8B5A30022F3A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2265475E19D8B5A30022F3A0 /* smufoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smufoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2265476319D8B5A30022F3A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2265476419D8B5A30022F3A0 /* smufoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smufoodTests.swift; sourceTree = "<group>"; };
+		227EB80C19D8EDD70003D758 /* OpenHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenHours.swift; sourceTree = "<group>"; };
+		227EB80E19D8F1280003D758 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		227EB81019D8F3890003D758 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		227EB81219D8F3960003D758 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		227EB81419D8F39F0003D758 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		227EB81619D8F3AA0003D758 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		227EB81819D8F3B50003D758 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		227EB81A19D8F4CF0003D758 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = ../../Downloads/Firebase.framework; sourceTree = "<group>"; };
+		227EB81C19D8F52B0003D758 /* smufood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "smufood-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2265474619D8B5A30022F3A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227EB81919D8F3B50003D758 /* SystemConfiguration.framework in Frameworks */,
+				227EB81B19D8F4CF0003D758 /* Firebase.framework in Frameworks */,
+				227EB81719D8F3AA0003D758 /* Security.framework in Frameworks */,
+				227EB81519D8F39F0003D758 /* CFNetwork.framework in Frameworks */,
+				227EB81319D8F3960003D758 /* libc++.dylib in Frameworks */,
+				227EB81119D8F3890003D758 /* libicucore.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2265475B19D8B5A30022F3A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2265474019D8B5A20022F3A0 = {
+			isa = PBXGroup;
+			children = (
+				227EB81819D8F3B50003D758 /* SystemConfiguration.framework */,
+				227EB81619D8F3AA0003D758 /* Security.framework */,
+				227EB81419D8F39F0003D758 /* CFNetwork.framework */,
+				227EB81219D8F3960003D758 /* libc++.dylib */,
+				227EB81A19D8F4CF0003D758 /* Firebase.framework */,
+				227EB81019D8F3890003D758 /* libicucore.dylib */,
+				2265474B19D8B5A30022F3A0 /* smufood */,
+				2265476119D8B5A30022F3A0 /* smufoodTests */,
+				2265474A19D8B5A30022F3A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2265474A19D8B5A30022F3A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2265474919D8B5A30022F3A0 /* smufood.app */,
+				2265475E19D8B5A30022F3A0 /* smufoodTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2265474B19D8B5A30022F3A0 /* smufood */ = {
+			isa = PBXGroup;
+			children = (
+				2265474E19D8B5A30022F3A0 /* AppDelegate.swift */,
+				2265475019D8B5A30022F3A0 /* ViewController.swift */,
+				227EB80E19D8F1280003D758 /* FirebaseHelper.swift */,
+				227EB80C19D8EDD70003D758 /* OpenHours.swift */,
+				2265475219D8B5A30022F3A0 /* Main.storyboard */,
+				2265475519D8B5A30022F3A0 /* Images.xcassets */,
+				2265475719D8B5A30022F3A0 /* LaunchScreen.xib */,
+				2265474C19D8B5A30022F3A0 /* Supporting Files */,
+				227EB81C19D8F52B0003D758 /* smufood-Bridging-Header.h */,
+			);
+			path = smufood;
+			sourceTree = "<group>";
+		};
+		2265474C19D8B5A30022F3A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2265474D19D8B5A30022F3A0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2265476119D8B5A30022F3A0 /* smufoodTests */ = {
+			isa = PBXGroup;
+			children = (
+				2265476419D8B5A30022F3A0 /* smufoodTests.swift */,
+				2265476219D8B5A30022F3A0 /* Supporting Files */,
+			);
+			path = smufoodTests;
+			sourceTree = "<group>";
+		};
+		2265476219D8B5A30022F3A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2265476319D8B5A30022F3A0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2265474819D8B5A30022F3A0 /* smufood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2265476819D8B5A30022F3A0 /* Build configuration list for PBXNativeTarget "smufood" */;
+			buildPhases = (
+				2265474519D8B5A30022F3A0 /* Sources */,
+				2265474619D8B5A30022F3A0 /* Frameworks */,
+				2265474719D8B5A30022F3A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = smufood;
+			productName = smufood;
+			productReference = 2265474919D8B5A30022F3A0 /* smufood.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2265475D19D8B5A30022F3A0 /* smufoodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2265476B19D8B5A30022F3A0 /* Build configuration list for PBXNativeTarget "smufoodTests" */;
+			buildPhases = (
+				2265475A19D8B5A30022F3A0 /* Sources */,
+				2265475B19D8B5A30022F3A0 /* Frameworks */,
+				2265475C19D8B5A30022F3A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2265476019D8B5A30022F3A0 /* PBXTargetDependency */,
+			);
+			name = smufoodTests;
+			productName = smufoodTests;
+			productReference = 2265475E19D8B5A30022F3A0 /* smufoodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2265474119D8B5A30022F3A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Samuel Hunter";
+				TargetAttributes = {
+					2265474819D8B5A30022F3A0 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					2265475D19D8B5A30022F3A0 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 2265474819D8B5A30022F3A0;
+					};
+				};
+			};
+			buildConfigurationList = 2265474419D8B5A30022F3A0 /* Build configuration list for PBXProject "smufood" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2265474019D8B5A20022F3A0;
+			productRefGroup = 2265474A19D8B5A30022F3A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2265474819D8B5A30022F3A0 /* smufood */,
+				2265475D19D8B5A30022F3A0 /* smufoodTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2265474719D8B5A30022F3A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2265475419D8B5A30022F3A0 /* Main.storyboard in Resources */,
+				2265475919D8B5A30022F3A0 /* LaunchScreen.xib in Resources */,
+				2265475619D8B5A30022F3A0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2265475C19D8B5A30022F3A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2265474519D8B5A30022F3A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227EB80F19D8F1280003D758 /* FirebaseHelper.swift in Sources */,
+				2265475119D8B5A30022F3A0 /* ViewController.swift in Sources */,
+				2265474F19D8B5A30022F3A0 /* AppDelegate.swift in Sources */,
+				227EB80D19D8EDD70003D758 /* OpenHours.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2265475A19D8B5A30022F3A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2265476519D8B5A30022F3A0 /* smufoodTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2265476019D8B5A30022F3A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2265474819D8B5A30022F3A0 /* smufood */;
+			targetProxy = 2265475F19D8B5A30022F3A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2265475219D8B5A30022F3A0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2265475319D8B5A30022F3A0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2265475719D8B5A30022F3A0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2265475819D8B5A30022F3A0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2265476619D8B5A30022F3A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2265476719D8B5A30022F3A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2265476919D8B5A30022F3A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/sam/Downloads,
+				);
+				INFOPLIST_FILE = smufood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "smufood/smufood-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2265476A19D8B5A30022F3A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/sam/Downloads,
+				);
+				INFOPLIST_FILE = smufood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "smufood/smufood-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		2265476C19D8B5A30022F3A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = smufoodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smufood.app/smufood";
+			};
+			name = Debug;
+		};
+		2265476D19D8B5A30022F3A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = smufoodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smufood.app/smufood";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2265474419D8B5A30022F3A0 /* Build configuration list for PBXProject "smufood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2265476619D8B5A30022F3A0 /* Debug */,
+				2265476719D8B5A30022F3A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2265476819D8B5A30022F3A0 /* Build configuration list for PBXNativeTarget "smufood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2265476919D8B5A30022F3A0 /* Debug */,
+				2265476A19D8B5A30022F3A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2265476B19D8B5A30022F3A0 /* Build configuration list for PBXNativeTarget "smufoodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2265476C19D8B5A30022F3A0 /* Debug */,
+				2265476D19D8B5A30022F3A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2265474119D8B5A30022F3A0 /* Project object */;
+}
