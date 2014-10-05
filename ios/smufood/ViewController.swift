@@ -13,20 +13,11 @@ class ViewController: UITableViewController {
     
     var restaurants = [Restaurant]()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         getAsyncRequest()
-        /*dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.getAsyncRequest()
-            self.
-        })*/
         
     }
-    
-    
-    
     
     func getAsyncRequest()
     {
@@ -45,7 +36,6 @@ class ViewController: UITableViewController {
             
             var info : NSDictionary =  json!["data"] as NSDictionary
             var schedule : NSDictionary = info["schedule"] as NSDictionary
-            
             
             
             var keys = schedule.allKeys
@@ -77,19 +67,15 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        println(restaurants.count)
         return restaurants.count
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        //task.stopObserving()
     }
     
     
@@ -108,9 +94,7 @@ class ViewController: UITableViewController {
         
         var cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
         
-        
         //get dictionary for individual row
-
         if (restaurants.count > 0)
         {
             var rowData = restaurants[indexPath.row]
@@ -121,22 +105,7 @@ class ViewController: UITableViewController {
             
             cell.detailTextLabel!.font = UIFont(name: cell.textLabel!.font.fontName, size: 10)
         }
-        
-        
         return cell
-        
-        /*let cell = tableView.dequeueReusableCellWithIdentifier("MyTestCell", forIndexPath: indexPath) as UITableViewCell
-        
-        
-        
-        cell.textLabel!.font = UIFont(name: cell.textLabel!.font.fontName, size: 14)
-        cell.textLabel!.text = "something"
-        
-        cell.detailTextLabel!.font = UIFont(name: cell.textLabel!.font.fontName, size: 10)
-        
-        
-        return cell*/
     }
-
 }
 
