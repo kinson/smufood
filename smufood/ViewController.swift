@@ -7,40 +7,68 @@
 //
 
 import UIKit
+import Foundation
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UITableViewController {
     
-    @IBOutlet var appsTableView : UITableView?
+    var restaurants = [Restaurant]()
     
-    var elements = [OpenHours]()
     
-    var firebasehelp : FirebaseHelper! //implicitly unwrapped optional
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        getAsyncRequest()
+        /*dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.getAsyncRequest()
+            self.
+        })*/
+        
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
+    
+    
+    
+    func getAsyncRequest()
+    {
+        restaurants.removeAll(keepCapacity: false)
+        let url = NSURL(string: "http://smufood.com/schedule")
         
-        if firebasehelp == nil {
-            firebasehelp = FirebaseHelper { data in
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.elements = data
-                    
-                    self.tableView.reloadData()
-                }
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url) {(data, response, error) in
+            
+            var json: NSDictionary? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary
+            
+            if let err = error {
+                println("error parsing json")
+                return
             }
+            
+            
+            var info : NSDictionary =  json!["data"] as NSDictionary
+            var schedule : NSDictionary = info["schedule"] as NSDictionary
+            
+            
+            
+            var keys = schedule.allKeys
+            var stringtest : String = keys[0] as String
+            
+            for i in 0...(schedule.count-1)
+            {
+                stringtest = keys[i] as String
+                
+                
+                var restOpen : String = schedule[stringtest]!["open"] as String
+                var restClose : String = schedule[stringtest]!["close"] as String
+                
+                var restDate =  self.getCurrentTime()
+                var rest = Restaurant(name: stringtest, open: restOpen, close: restClose, date: restDate)
+                self.restaurants.append(rest)
+            }
+            
+            self.tableView.reloadData()
+            
         }
-        
-        firebasehelp.startObserving()
-    }
     
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        firebasehelp.stopObserving()
+        task.resume()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,16 +76,52 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        println(restaurants.count)
+        return restaurants.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
         
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
         
-        cell.textLabel?.text = "Row #\(indexPath.row)"
-        cell.detailTextLabel?.text = "Subtitle #\(indexPath.row)"
+        //task.stopObserving()
+    }
+    
+    
+    func getCurrentTime() -> String {
+        
+        let date = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = .ShortStyle
+        var stringValue = formatter.stringFromDate(date)
+        
+        return stringValue
+        
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
+        
+        
+        //get dictionary for individual row
+
+        if (restaurants.count > 0)
+        {
+            var rowData = restaurants[indexPath.row]
+            println(rowData)
+            
+            cell.textLabel!.font = UIFont(name: cell.textLabel!.font.fontName, size: 14)
+            cell.textLabel!.text = rowData.restName
+            
+            cell.detailTextLabel!.font = UIFont(name: cell.textLabel!.font.fontName, size: 10)
+        }
+        
         
         return cell
         
