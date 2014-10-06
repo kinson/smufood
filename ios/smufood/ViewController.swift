@@ -49,12 +49,18 @@ class ViewController: UITableViewController {
                 var restOpen : String = schedule[stringtest]!["open"] as String
                 var restClose : String = schedule[stringtest]!["close"] as String
                 
-                var restDate =  self.getCurrentTime()
+                var restDate =  TimeHelper.getCurrentDate()
                 var rest = Restaurant(name: stringtest, open: restOpen, close: restClose, date: restDate)
-                self.restaurants.append(rest)
+                if (TimeHelper.isOpen(restOpen, timeClose: restClose))
+                {
+                    println("is open")
+                    self.restaurants.append(rest)
+                }
             }
             
-            self.tableView.reloadData()
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.tableView.reloadData()
+            })
             
         }
     
@@ -79,16 +85,6 @@ class ViewController: UITableViewController {
     }
     
     
-    func getCurrentTime() -> String {
-        
-        let date = NSDate()
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = .ShortStyle
-        var stringValue = formatter.stringFromDate(date)
-        
-        return stringValue
-        
-    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -98,13 +94,13 @@ class ViewController: UITableViewController {
         if (restaurants.count > 0)
         {
             var rowData = restaurants[indexPath.row]
-            println(rowData)
             
             cell.textLabel!.font = UIFont(name: cell.textLabel!.font.fontName, size: 14)
             cell.textLabel!.text = rowData.restName
             
             cell.detailTextLabel!.font = UIFont(name: cell.textLabel!.font.fontName, size: 10)
         }
+        
         return cell
     }
 }

@@ -22,12 +22,17 @@ class Restaurant {
         self.restOpen = open
         self.restClose = close
         self.restDate = date
-    
+        
+        self.restOpen = TimeHelper.parseTime(restOpen)
+        self.restClose = TimeHelper.parseTime(restClose)
+        
     }
 
     
     func toString() -> String {
         return self.restName + self.restOpen + self.restClose 
     }
+    
+    
     
 }
