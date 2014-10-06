@@ -7,20 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2217074319E0AC1F00EFC0D2 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2217074219E0AC1F00EFC0D2 /* Restaurant.swift */; };
 		2265474F19D8B5A30022F3A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265474E19D8B5A30022F3A0 /* AppDelegate.swift */; };
 		2265475119D8B5A30022F3A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265475019D8B5A30022F3A0 /* ViewController.swift */; };
 		2265475419D8B5A30022F3A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2265475219D8B5A30022F3A0 /* Main.storyboard */; };
 		2265475619D8B5A30022F3A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2265475519D8B5A30022F3A0 /* Images.xcassets */; };
 		2265475919D8B5A30022F3A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2265475719D8B5A30022F3A0 /* LaunchScreen.xib */; };
 		2265476519D8B5A30022F3A0 /* smufoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265476419D8B5A30022F3A0 /* smufoodTests.swift */; };
-		227EB80D19D8EDD70003D758 /* OpenHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EB80C19D8EDD70003D758 /* OpenHours.swift */; };
-		227EB80F19D8F1280003D758 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EB80E19D8F1280003D758 /* FirebaseHelper.swift */; };
-		227EB81119D8F3890003D758 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 227EB81019D8F3890003D758 /* libicucore.dylib */; };
-		227EB81319D8F3960003D758 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 227EB81219D8F3960003D758 /* libc++.dylib */; };
-		227EB81519D8F39F0003D758 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227EB81419D8F39F0003D758 /* CFNetwork.framework */; };
-		227EB81719D8F3AA0003D758 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227EB81619D8F3AA0003D758 /* Security.framework */; };
-		227EB81919D8F3B50003D758 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227EB81819D8F3B50003D758 /* SystemConfiguration.framework */; };
-		227EB81B19D8F4CF0003D758 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227EB81A19D8F4CF0003D758 /* Firebase.framework */; };
+		22E9C58F19E1ED5400269BDD /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9C58E19E1ED5400269BDD /* TimeHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2217074219E0AC1F00EFC0D2 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		2265474919D8B5A30022F3A0 /* smufood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smufood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2265474D19D8B5A30022F3A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2265474E19D8B5A30022F3A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,15 +39,7 @@
 		2265475E19D8B5A30022F3A0 /* smufoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smufoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2265476319D8B5A30022F3A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2265476419D8B5A30022F3A0 /* smufoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smufoodTests.swift; sourceTree = "<group>"; };
-		227EB80C19D8EDD70003D758 /* OpenHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenHours.swift; sourceTree = "<group>"; };
-		227EB80E19D8F1280003D758 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
-		227EB81019D8F3890003D758 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
-		227EB81219D8F3960003D758 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		227EB81419D8F39F0003D758 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		227EB81619D8F3AA0003D758 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		227EB81819D8F3B50003D758 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		227EB81A19D8F4CF0003D758 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = ../../Downloads/Firebase.framework; sourceTree = "<group>"; };
-		227EB81C19D8F52B0003D758 /* smufood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "smufood-Bridging-Header.h"; sourceTree = "<group>"; };
+		22E9C58E19E1ED5400269BDD /* TimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227EB81919D8F3B50003D758 /* SystemConfiguration.framework in Frameworks */,
-				227EB81B19D8F4CF0003D758 /* Firebase.framework in Frameworks */,
-				227EB81719D8F3AA0003D758 /* Security.framework in Frameworks */,
-				227EB81519D8F39F0003D758 /* CFNetwork.framework in Frameworks */,
-				227EB81319D8F3960003D758 /* libc++.dylib in Frameworks */,
-				227EB81119D8F3890003D758 /* libicucore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +63,6 @@
 		2265474019D8B5A20022F3A0 = {
 			isa = PBXGroup;
 			children = (
-				227EB81819D8F3B50003D758 /* SystemConfiguration.framework */,
-				227EB81619D8F3AA0003D758 /* Security.framework */,
-				227EB81419D8F39F0003D758 /* CFNetwork.framework */,
-				227EB81219D8F3960003D758 /* libc++.dylib */,
-				227EB81A19D8F4CF0003D758 /* Firebase.framework */,
-				227EB81019D8F3890003D758 /* libicucore.dylib */,
 				2265474B19D8B5A30022F3A0 /* smufood */,
 				2265476119D8B5A30022F3A0 /* smufoodTests */,
 				2265474A19D8B5A30022F3A0 /* Products */,
@@ -108,13 +83,12 @@
 			children = (
 				2265474E19D8B5A30022F3A0 /* AppDelegate.swift */,
 				2265475019D8B5A30022F3A0 /* ViewController.swift */,
-				227EB80E19D8F1280003D758 /* FirebaseHelper.swift */,
-				227EB80C19D8EDD70003D758 /* OpenHours.swift */,
+				22E9C58E19E1ED5400269BDD /* TimeHelper.swift */,
+				2217074219E0AC1F00EFC0D2 /* Restaurant.swift */,
 				2265475219D8B5A30022F3A0 /* Main.storyboard */,
 				2265475519D8B5A30022F3A0 /* Images.xcassets */,
 				2265475719D8B5A30022F3A0 /* LaunchScreen.xib */,
 				2265474C19D8B5A30022F3A0 /* Supporting Files */,
-				227EB81C19D8F52B0003D758 /* smufood-Bridging-Header.h */,
 			);
 			path = smufood;
 			sourceTree = "<group>";
@@ -193,9 +167,11 @@
 				TargetAttributes = {
 					2265474819D8B5A30022F3A0 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 6EGB897249;
 					};
 					2265475D19D8B5A30022F3A0 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 6EGB897249;
 						TestTargetID = 2265474819D8B5A30022F3A0;
 					};
 				};
@@ -244,10 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227EB80F19D8F1280003D758 /* FirebaseHelper.swift in Sources */,
 				2265475119D8B5A30022F3A0 /* ViewController.swift in Sources */,
 				2265474F19D8B5A30022F3A0 /* AppDelegate.swift in Sources */,
-				227EB80D19D8EDD70003D758 /* OpenHours.swift in Sources */,
+				22E9C58F19E1ED5400269BDD /* TimeHelper.swift in Sources */,
+				2217074319E0AC1F00EFC0D2 /* Restaurant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,9 +355,10 @@
 				);
 				INFOPLIST_FILE = smufood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "smufood/smufood-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -398,7 +375,8 @@
 				INFOPLIST_FILE = smufood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "smufood/smufood-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -406,6 +384,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -417,6 +397,7 @@
 				INFOPLIST_FILE = smufoodTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smufood.app/smufood";
 			};
 			name = Debug;
@@ -425,6 +406,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -432,6 +415,7 @@
 				INFOPLIST_FILE = smufoodTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smufood.app/smufood";
 			};
 			name = Release;
