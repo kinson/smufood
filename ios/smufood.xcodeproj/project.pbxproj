@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2217074319E0AC1F00EFC0D2 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2217074219E0AC1F00EFC0D2 /* Restaurant.swift */; };
+		223EE75319E303CF00574849 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223EE75219E303CF00574849 /* RestaurantCell.swift */; };
 		2265474F19D8B5A30022F3A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265474E19D8B5A30022F3A0 /* AppDelegate.swift */; };
 		2265475119D8B5A30022F3A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265475019D8B5A30022F3A0 /* ViewController.swift */; };
 		2265475419D8B5A30022F3A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2265475219D8B5A30022F3A0 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		2217074219E0AC1F00EFC0D2 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		223EE75219E303CF00574849 /* RestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		2265474919D8B5A30022F3A0 /* smufood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smufood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2265474D19D8B5A30022F3A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2265474E19D8B5A30022F3A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				22E9C58E19E1ED5400269BDD /* TimeHelper.swift */,
 				2217074219E0AC1F00EFC0D2 /* Restaurant.swift */,
 				2265475219D8B5A30022F3A0 /* Main.storyboard */,
+				223EE75219E303CF00574849 /* RestaurantCell.swift */,
 				2265475519D8B5A30022F3A0 /* Images.xcassets */,
 				2265475719D8B5A30022F3A0 /* LaunchScreen.xib */,
 				2265474C19D8B5A30022F3A0 /* Supporting Files */,
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223EE75319E303CF00574849 /* RestaurantCell.swift in Sources */,
 				2265475119D8B5A30022F3A0 /* ViewController.swift in Sources */,
 				2265474F19D8B5A30022F3A0 /* AppDelegate.swift in Sources */,
 				22E9C58F19E1ED5400269BDD /* TimeHelper.swift in Sources */,

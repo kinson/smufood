@@ -72,12 +72,13 @@ class TimeHelper {
             }
         }
         
+        //corner case, 12 am means 24:00, not 12:00
         if (hoursString.toInt() == 12 && !isPM)
         {
             return "24:00"
         }
         
-        if (isPM)
+        if (isPM && hoursString.toInt() != 12)
         {
             hoursString = String(hoursString.toInt()! + 12)
         }
@@ -102,9 +103,9 @@ class TimeHelper {
     //implement close time and open time parsing
     class func isOpen(var timeOpen: String, var timeClose: String) -> Bool {
     
-        //var currentTime = parseTime(getCurrentTime())
+        var currentTime = parseTime(getCurrentTime())
         //test value
-        var currentTime = parseTime("4:45 PM")
+        //var currentTime = parseTime("4:45 PM")
         var foundColon = false
         
         var hourStringOpen : String = ""
@@ -196,5 +197,72 @@ class TimeHelper {
         
         return false
     }
+    
+    class func almostClosed(var timeClose :String) -> Bool {
+        
+        var currentTime = parseTime(getCurrentTime())
+        //test value
+        //var currentTime = parseTime("4:45 PM")
+        
+        if (getHour(timeClose) - getHour(currentTime) < 1) {
+            if (getMinute(timeClose) - getMinute(currentTime) <= 30) {
+                return true
+            }
+        }
+        else if (getHour(timeClose) - getHour(currentTime) == 1) {
+            if ((60 - getMinute(currentTime)) + (getMinute(timeClose)) < 30) {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    
+    
+    
+    class func getHour(var time : String) -> Int {
+        
+        var hourString : String = ""
+        
+        for character in time {
+            if (character == ":") {
+                break
+            }
+            else
+            {
+                hourString.append(character)
+            }
+            
+            
+        }
+        return hourString.toInt()!
+        
+    }
+    
+    class func getMinute(var time :String) -> Int {
+        
+        var minuteString : String = ""
+        var foundColon : Bool = false
+        
+        
+        
+        for character in time {
+            if (character == ":") {
+                foundColon = true
+            }
+            else {
+                if (foundColon) {
+                    minuteString.append(character)
+                }
+            }
+            
+        }
+        
+        return minuteString.toInt()!
+    }
+    
+    
+    
     
 }

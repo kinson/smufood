@@ -15,8 +15,6 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAsyncRequest()
-        
     }
     
     func getAsyncRequest()
@@ -30,6 +28,7 @@ class ViewController: UITableViewController {
             
             if let err = error {
                 println("error parsing json")
+                println(json)
                 return
             }
             
@@ -53,7 +52,6 @@ class ViewController: UITableViewController {
                 var rest = Restaurant(name: stringtest, open: restOpen, close: restClose, date: restDate)
                 if (TimeHelper.isOpen(restOpen, timeClose: restClose))
                 {
-                    println("is open")
                     self.restaurants.append(rest)
                 }
             }
@@ -78,6 +76,7 @@ class ViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
+        getAsyncRequest()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -85,20 +84,27 @@ class ViewController: UITableViewController {
     }
     
     
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
+        //var cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
+        var cell = tableView.dequeueReusableCellWithIdentifier("MyTestCell") as RestaurantCell
         
         //get dictionary for individual row
         if (restaurants.count > 0)
         {
             var rowData = restaurants[indexPath.row]
+            self.tableView.rowHeight = 50;
             
-            cell.textLabel!.font = UIFont(name: cell.textLabel!.font.fontName, size: 14)
-            cell.textLabel!.text = rowData.restName
-            
-            cell.detailTextLabel!.font = UIFont(name: cell.textLabel!.font.fontName, size: 10)
+            if (TimeHelper.almostClosed(rowData.restCloseParsed)) {
+                cell.hoursLabel!.textColor = UIColor.redColor()
+            }
+            else {
+                cell.hoursLabel!.textColor = UIColor.blackColor()
+            }
+            cell.hoursLabel!.text = "Until " + rowData.restClose
+            cell.nameLabel!.text = rowData.realName
+            cell.nameLabel!.sizeToFit()
+
         }
         
         return cell
