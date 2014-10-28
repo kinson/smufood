@@ -1,4 +1,7 @@
 var app = require('express')();
+var cheerio = require('cheerio');
+var request = require('request');
+
 var reg = {
     status: 0,
     data: {
@@ -126,6 +129,13 @@ var fri = {
     }
 };
 
+var getUrl = function(callback) {
+    request.get("http://www.campusdish.com/en-US/CSSW/SouthernMethodist/LocationsMenus/Hours.htm", function(err, res, body) {
+        var $ = cheerio.load(body);
+        var url = 'http://www.campusdish.com' + $('font:contains("October 2014")').closest('a').attr('href');
+        callback(url);
+    });
+};
 
 app.get('/schedule', function(req, res) {
     var day = new Date().getDay();
@@ -134,6 +144,6 @@ app.get('/schedule', function(req, res) {
     else res.json(reg);
 });
 
-app.listen(80, function() {
+app.listen(8080, function() {
     console.log('server online');
 });

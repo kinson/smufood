@@ -1,8 +1,11 @@
 {
     "name": "smufood",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Is your favorite on campus food location open?",
     "dependencies": {
-        "express": "*"
+        "express": "*",
+	    "cheerio": "*",
+	    "request": "*",
+        "pdf2json": "*"
     }
 }
