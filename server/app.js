@@ -83,7 +83,7 @@ var fri = {
             },
             chickfila: {
                 open: "8am",
-                close: "3pm"
+                close: "5pm"
             },
             cafe100: {
                 open: "7:30am",
@@ -91,11 +91,11 @@ var fri = {
             },
             subway: {
                 open: "8am",
-                close: "4pm"
+                close: "7pm"
             },
             pizzahut: {
                 open: "10:30am",
-                close: "4pm"
+                close: "7pm"
             },
             esmucho: {
                 open: "10:30am",
@@ -107,19 +107,19 @@ var fri = {
             },
             market: {
                 open: "9am",
-                close: "4pm"
+                close: "11pm"
             },
             einsteins: {
                 open: "7:30am",
-                close: "2pm"
+                close: "8:15pm"
             },
             pod: {
                 open: "8am",
-                close: "2pm"
+                close: "8pm"
             },
             smuothies: {
-                open: "closed",
-                close: "closed"
+                open: "8am",
+                close: "8pm"
             },
             facultyclub: {
                 open: "11am",
