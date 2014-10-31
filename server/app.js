@@ -1,71 +1,149 @@
 var app = require('express')();
+var cheerio = require('cheerio');
+var request = require('request');
+
+var reg = {
+    status: 0,
+    data: {
+        schedule: {
+            macs: {
+                open: "11am",
+                close: "12am"
+            },
+            arnold: {
+                open: "7am",
+                close: "10pm"
+            },
+            umph: {
+                open: "7am",
+                close: "8pm"
+            },
+            chickfila: {
+                open: "8am",
+                close: "5pm"
+            },
+            cafe100: {
+                open: "7:30am",
+                close: "8pm"
+            },
+            subway: {
+                open: "8am",
+                close: "7pm"
+            },
+            pizzahut: {
+                open: "10:30am",
+                close: "7pm"
+            },
+            esmucho: {
+                open: "10:30am",
+                close: "3pm"
+            },
+            sushic: {
+                open: "10:30am",
+                close: "3pm"
+            },
+            market: {
+                open: "9am",
+                close: "11pm"
+            },
+            einsteins: {
+                open: "8am",
+                close: "6:30pm"
+            },
+            pod: {
+                open: "8am",
+                close: "8pm"
+            },
+            smuothies: {
+                open: "closed",
+                close: "closed"
+            },
+            facultyclub: {
+                open: "11am",
+                close: "2pm"
+            }
+        }
+    }
+};
+var fri = {
+    status: 0,
+    data: {
+        schedule: {
+            macs: {
+                open: "5pm",
+                close: "10pm"
+            },
+            arnold: {
+                open: "7am",
+                close: "7pm"
+            },
+            umph: {
+                open: "7am",
+                close: "2pm"
+            },
+            chickfila: {
+                open: "8am",
+                close: "3pm"
+            },
+            cafe100: {
+                open: "7:30am",
+                close: "3pm"
+            },
+            subway: {
+                open: "8am",
+                close: "4pm"
+            },
+            pizzahut: {
+                open: "10:30am",
+                close: "4pm"
+            },
+            esmucho: {
+                open: "10:30am",
+                close: "3pm"
+            },
+            sushic: {
+                open: "10:30am",
+                close: "3pm"
+            },
+            market: {
+                open: "9am",
+                close: "4pm"
+            },
+            einsteins: {
+                open: "7:30am",
+                close: "2pm"
+            },
+            pod: {
+                open: "8am",
+                close: "2pm"
+            },
+            smuothies: {
+                open: "closed",
+                close: "closed"
+            },
+            facultyclub: {
+                open: "11am",
+                close: "2pm"
+            }
+        }
+    }
+};
+
+var getUrl = function(callback) {
+    request.get("http://www.campusdish.com/en-US/CSSW/SouthernMethodist/LocationsMenus/Hours.htm", function(err, res, body) {
+        var $ = cheerio.load(body);
+        var url = 'http://www.campusdish.com' + $('font:contains("October 2014")').closest('a').attr('href');
+        callback(url);
+    });
+};
 
 app.get('/schedule', function(req, res) {
-	res.json({
-		status: 0,
-		data: {
-			schedule: {
-                macs: {
-                    open: "6pm",
-                    close: "11pm"
-                },
-                arnold: {
-                    open: "6am",
-                    close: "10pm"
-                },
-                umph: {
-                    open: "6am",
-                    close: "8pm"
-                },
-                chickfila: {
-                    open: "8am",
-                    close: "7pm"
-                },
-                cafe100: {
-                    open: "6am",
-                    close: "10pm"
-                },
-                subway: {
-                    open: "8am",
-                    close: "7pm"
-                },
-                pizzahut: {
-                    open: "8am",
-                    close: "7pm"
-                },
-                esmucho: {
-                    open: "11am",
-                    close: "7pm"
-                },
-                sushic: {
-                    open: "11am",
-                    close: "7pm"
-                },
-                market: {
-                    open: "8am",
-                    close: "12am"
-                },
-                einsteins: {
-                    open: "6am",
-                    close: "10pm"
-                },
-                pod: {
-                    open: "6am",
-                    close: "10pm"
-                },
-                smuothies: {
-                    open: "8am",
-                    close: "6pm"
-                },
-                facultyclub: {
-                    open: "11am",
-                    close: "2pm"
-                }
-            }
-		}
-	});
+    var day = new Date().getDay();
+    if(day >= 1 && day < 5) res.json(reg);
+    if(day === 5) res.json(fri);
+    else res.json(reg);
 });
 
-app.listen(80, function() {
+app.listen(8080, function() {
     console.log('server online');
 });
