@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "smufood/ViewController.swift"
-            timestampString = "434313706.212894"
+            timestampString = "434691969.242902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "smufood/ViewController.swift"
-            timestampString = "434313706.212894"
+            timestampString = "434691969.242902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "smufood/ViewController.swift"
-            timestampString = "434313706.212894"
+            timestampString = "434691969.242902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "getAsyncRequest()"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "smufood/ViewController.swift"
-            timestampString = "434313706.212894"
+            timestampString = "434691969.242902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "getAsyncRequest()"
             landmarkType = "5">
             <Locations>

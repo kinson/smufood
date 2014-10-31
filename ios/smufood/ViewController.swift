@@ -13,16 +13,27 @@ class ViewController: UITableViewController {
     
     var restaurants = [Restaurant]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.refreshControl = UIRefreshControl()
+        //self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl!.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshControl!)
+        self.navigationItem.title = "SMUfood"
+    }
+    
+    func refresh(sender:AnyObject)
+    {
+        getAsyncRequest()
     }
     
     func getAsyncRequest()
     {
         restaurants.removeAll(keepCapacity: false)
-        let url = NSURL(string: "http://smufood.com/schedule")
+        let url = NSURL(string: "http://104.131.77.181/schedule")
         
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url) {(data, response, error) in
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
             
             var json: NSDictionary? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary
             
@@ -58,6 +69,7 @@ class ViewController: UITableViewController {
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.tableView.reloadData()
+                self.refreshControl!.endRefreshing()
             })
             
         }

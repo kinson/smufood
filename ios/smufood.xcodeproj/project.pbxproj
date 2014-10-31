@@ -15,6 +15,7 @@
 		2265475619D8B5A30022F3A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2265475519D8B5A30022F3A0 /* Images.xcassets */; };
 		2265475919D8B5A30022F3A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2265475719D8B5A30022F3A0 /* LaunchScreen.xib */; };
 		2265476519D8B5A30022F3A0 /* smufoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265476419D8B5A30022F3A0 /* smufoodTests.swift */; };
+		2276FFD319E62D77002B0405 /* CustomNavbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2276FFD219E62D77002B0405 /* CustomNavbar.swift */; };
 		22E9C58F19E1ED5400269BDD /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9C58E19E1ED5400269BDD /* TimeHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		2265475E19D8B5A30022F3A0 /* smufoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smufoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2265476319D8B5A30022F3A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2265476419D8B5A30022F3A0 /* smufoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smufoodTests.swift; sourceTree = "<group>"; };
+		2276FFD219E62D77002B0405 /* CustomNavbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavbar.swift; sourceTree = "<group>"; };
 		22E9C58E19E1ED5400269BDD /* TimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				22E9C58E19E1ED5400269BDD /* TimeHelper.swift */,
 				2217074219E0AC1F00EFC0D2 /* Restaurant.swift */,
 				2265475219D8B5A30022F3A0 /* Main.storyboard */,
+				2276FFD219E62D77002B0405 /* CustomNavbar.swift */,
 				223EE75219E303CF00574849 /* RestaurantCell.swift */,
 				2265475519D8B5A30022F3A0 /* Images.xcassets */,
 				2265475719D8B5A30022F3A0 /* LaunchScreen.xib */,
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2276FFD319E62D77002B0405 /* CustomNavbar.swift in Sources */,
 				223EE75319E303CF00574849 /* RestaurantCell.swift in Sources */,
 				2265475119D8B5A30022F3A0 /* ViewController.swift in Sources */,
 				2265474F19D8B5A30022F3A0 /* AppDelegate.swift in Sources */,
