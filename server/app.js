@@ -144,6 +144,6 @@ app.get('/schedule', function(req, res) {
     else res.json(reg);
 });
 
-app.listen(8080, function() {
+app.listen(80, function() {
     console.log('server online');
 });
