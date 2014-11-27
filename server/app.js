@@ -1,6 +1,10 @@
-var app = require('express')();
+'use strict';
+
+var express = require('express');
+var app = express();
 var cheerio = require('cheerio');
 var request = require('request');
+var exec = require('child_process').exec;
 
 var reg = {
     status: 0,
@@ -137,11 +141,33 @@ var getUrl = function(callback) {
     });
 };
 
+// routes
+app.use(express.static(__dirname + '/public/_site'));
 app.get('/schedule', function(req, res) {
     var day = new Date().getDay();
-    if(day >= 1 && day < 5) res.json(reg);
-    if(day === 5) res.json(fri);
-    else res.json(reg);
+    if(day >= 1 && day < 5) {
+        res.json(reg);
+    }
+    if(day === 5) {
+        res.json(fri);
+    }
+    else {
+        res.json(reg);
+    }
+});
+app.post('/redeploy', function(req, res) {
+    res.send();
+    exec('make', function(err, stdout, stderr) {
+        if(err) {
+            console.err(err);
+        }
+        if(stdout) {
+            console.log(stdout);
+        }
+        if(stderr) {
+            console.err(stderr);
+        }
+    });
 });
 
 app.listen(80, function() {
