@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SMUfood</title>
+    <description>A single-page template for Jekyll based blogs (like what you&#39;d use on github pages!)</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 11 Nov 2014 20:03:53 -0600</pubDate>
+    <lastBuildDate>Tue, 11 Nov 2014 20:03:53 -0600</lastBuildDate>
+    <generator>Jekyll v2.5.1</generator>
+    
+      <item>
+        <title>team</title>
+        <description>&lt;h2 id=&quot;teamwork-makes-the-dream-work&quot;&gt;teamwork makes the dream work&lt;/h2&gt;
+&lt;p&gt;Our team consists of three computer science students at SMU. We all share a passion for learning and building cool shit.&lt;/p&gt;
+
+&lt;h3 id=&quot;samuel-hunterhttpsgithubcomkinson&quot;&gt;&lt;a href=&quot;https://github.com/kinson&quot;&gt;Samuel Hunter&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Currently a Sophomore at SMU, Sam is responsible for designing, building and deploying the iOS application.&lt;/p&gt;
+
+&lt;h3 id=&quot;conrad-henry-appel-ivhttpsgithubcomconradhappeliv&quot;&gt;&lt;a href=&quot;https://github.com/conradhappeliv&quot;&gt;Conrad Henry Appel IV&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Our funky fresh backend specialist bakes our stack with lots of love.&lt;/p&gt;
+
+&lt;h3 id=&quot;gavin-phamhttpsgithubcomgavinpham&quot;&gt;&lt;a href=&quot;https://github.com/gavinpham&quot;&gt;Gavin Pham&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Gavin is the glue that holds the SMUfood phamily together. Oh, and he’s also responsible for the API architecture and data mining.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 13 Nov 2014 00:00:00 -0600</pubDate>
+        <link>/</link>
+        <guid isPermaLink="true">/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>App</title>
+        <description>&lt;h1 id=&quot;smufood-application&quot;&gt;SMUfood Application&lt;/h1&gt;
+
+&lt;p&gt;The SMUfood ios app is coming soon the App store, where it will freely allow users to easily see when each restaurant is open.&lt;/p&gt;
+
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/img/smufoodapppage2.png&quot; /&gt;&lt;/div&gt;
+</description>
+        <pubDate>Wed, 12 Nov 2014 00:00:00 -0600</pubDate>
+        <link>/</link>
+        <guid isPermaLink="true">/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>home</title>
+        <description>&lt;h2 id=&quot;smufood&quot;&gt;SMUfood!&lt;/h2&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;&lt;img height=&quot;350&quot; width=&quot;350&quot; src=&quot;/img/smufoodbiglogonobg.gif&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;SMUfood is an app that changes how you interact with campus dining at SMU. A 2014 &lt;a href=&quot;http://www.smu.edu/provost/bigideas&quot;&gt;Big iDeas&lt;/a&gt; grant winner, SMUfood is a work in progress.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 11 Nov 2014 00:00:00 -0600</pubDate>
+        <link>/</link>
+        <guid isPermaLink="true">/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
