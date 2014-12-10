@@ -69,37 +69,37 @@ var reg = {
         }
     }
 };
-var fri = {
+var thur = {
     status: 0,
     data: {
         schedule: {
             macs: {
-                open: "5pm",
-                close: "10pm"
+                open: "11am",
+                close: "12am"
             },
             arnold: {
                 open: "7am",
-                close: "7pm"
+                close: "10pm"
             },
             umph: {
                 open: "7am",
-                close: "2pm"
+                close: "8pm"
             },
             chickfila: {
                 open: "8am",
-                close: "5pm"
+                close: "3pm"
             },
             cafe100: {
                 open: "7:30am",
-                close: "3pm"
+                close: "8pm"
             },
             subway: {
-                open: "8am",
-                close: "7pm"
+                open: "10:30am",
+                close: "4pm"
             },
             pizzahut: {
                 open: "10:30am",
-                close: "7pm"
+                close: "4pm"
             },
             esmucho: {
                 open: "10:30am",
@@ -115,15 +115,78 @@ var fri = {
             },
             einsteins: {
                 open: "7:30am",
-                close: "8:15pm"
+                close: "4:30pm"
             },
             pod: {
                 open: "8am",
                 close: "8pm"
             },
             smuothies: {
+                open: "closed",
+                close: "closed"
+            },
+            facultyclub: {
+                open: "11am",
+                close: "2pm"
+            }
+        }
+    }
+};
+var fri = {
+    status: 0,
+    data: {
+        schedule: {
+            macs: {
+                open: "6pm",
+                close: "10pm"
+            },
+            arnold: {
+                open: "7am",
+                close: "7pm"
+            },
+            umph: {
+                open: "7am",
+                close: "2pm"
+            },
+            chickfila: {
                 open: "8am",
-                close: "8pm"
+                close: "3pm"
+            },
+            cafe100: {
+                open: "7:30am",
+                close: "3pm"
+            },
+            subway: {
+                open: "10:30am",
+                close: "4pm"
+            },
+            pizzahut: {
+                open: "10:30am",
+                close: "4pm"
+            },
+            esmucho: {
+                open: "10:30am",
+                close: "3pm"
+            },
+            sushic: {
+                open: "10:30am",
+                close: "3pm"
+            },
+            market: {
+                open: "9am",
+                close: "11pm"
+            },
+            einsteins: {
+                open: "7:30am",
+                close: "2:00pm"
+            },
+            pod: {
+                open: "8am",
+                close: "2pm"
+            },
+            smuothies: {
+                open: "closed",
+                close: "closed"
             },
             facultyclub: {
                 open: "11am",
@@ -145,8 +208,11 @@ var getUrl = function(callback) {
 app.use(express.static(__dirname + '/public/_site'));
 app.get('/schedule', function(req, res) {
     var day = new Date().getDay();
-    if(day >= 1 && day < 5) {
+    if(day >= 1 && day < 4) {
         res.json(reg);
+    }
+    if(day === 4){
+        res.json(thur);
     }
     if(day === 5) {
         res.json(fri);
