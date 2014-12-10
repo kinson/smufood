@@ -24,7 +24,7 @@ var reg = {
             },
             chickfila: {
                 open: "8am",
-                close: "5pm"
+                close: "3pm"
             },
             cafe100: {
                 open: "7:30am",
@@ -32,11 +32,11 @@ var reg = {
             },
             subway: {
                 open: "8am",
-                close: "7pm"
+                close: "4pm"
             },
             pizzahut: {
                 open: "10:30am",
-                close: "7pm"
+                close: "4pm"
             },
             esmucho: {
                 open: "10:30am",
@@ -52,7 +52,7 @@ var reg = {
             },
             einsteins: {
                 open: "8am",
-                close: "6:30pm"
+                close: "4:30pm"
             },
             pod: {
                 open: "8am",
