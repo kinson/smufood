@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2217074319E0AC1F00EFC0D2 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2217074219E0AC1F00EFC0D2 /* Restaurant.swift */; };
+		22292C6C1A425BF8001482F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22292C6B1A425BF8001482F5 /* Main.storyboard */; };
 		223EE75319E303CF00574849 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223EE75219E303CF00574849 /* RestaurantCell.swift */; };
 		2265474F19D8B5A30022F3A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265474E19D8B5A30022F3A0 /* AppDelegate.swift */; };
 		2265475119D8B5A30022F3A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265475019D8B5A30022F3A0 /* ViewController.swift */; };
-		2265475419D8B5A30022F3A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2265475219D8B5A30022F3A0 /* Main.storyboard */; };
 		2265475619D8B5A30022F3A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2265475519D8B5A30022F3A0 /* Images.xcassets */; };
 		2265475919D8B5A30022F3A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2265475719D8B5A30022F3A0 /* LaunchScreen.xib */; };
 		2265476519D8B5A30022F3A0 /* smufoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265476419D8B5A30022F3A0 /* smufoodTests.swift */; };
@@ -31,12 +31,12 @@
 
 /* Begin PBXFileReference section */
 		2217074219E0AC1F00EFC0D2 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		22292C6B1A425BF8001482F5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		223EE75219E303CF00574849 /* RestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		2265474919D8B5A30022F3A0 /* smufood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smufood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2265474D19D8B5A30022F3A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2265474E19D8B5A30022F3A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2265475019D8B5A30022F3A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2265475319D8B5A30022F3A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2265475519D8B5A30022F3A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2265475819D8B5A30022F3A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2265475E19D8B5A30022F3A0 /* smufoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smufoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,11 +85,11 @@
 		2265474B19D8B5A30022F3A0 /* smufood */ = {
 			isa = PBXGroup;
 			children = (
+				22292C6B1A425BF8001482F5 /* Main.storyboard */,
 				2265474E19D8B5A30022F3A0 /* AppDelegate.swift */,
 				2265475019D8B5A30022F3A0 /* ViewController.swift */,
 				22E9C58E19E1ED5400269BDD /* TimeHelper.swift */,
 				2217074219E0AC1F00EFC0D2 /* Restaurant.swift */,
-				2265475219D8B5A30022F3A0 /* Main.storyboard */,
 				2276FFD219E62D77002B0405 /* CustomNavbar.swift */,
 				223EE75219E303CF00574849 /* RestaurantCell.swift */,
 				2265475519D8B5A30022F3A0 /* Images.xcassets */,
@@ -206,7 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2265475419D8B5A30022F3A0 /* Main.storyboard in Resources */,
+				22292C6C1A425BF8001482F5 /* Main.storyboard in Resources */,
 				2265475919D8B5A30022F3A0 /* LaunchScreen.xib in Resources */,
 				2265475619D8B5A30022F3A0 /* Images.xcassets in Resources */,
 			);
@@ -254,14 +254,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2265475219D8B5A30022F3A0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2265475319D8B5A30022F3A0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2265475719D8B5A30022F3A0 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

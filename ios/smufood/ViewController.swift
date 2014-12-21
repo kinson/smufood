@@ -9,17 +9,18 @@
 import UIKit
 import Foundation
 
-class ViewController: UITableViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet var appsTableView : UITableView?
     var restaurants = [Restaurant]()
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.refreshControl = UIRefreshControl()
-        //self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl!.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
-        self.tableView.addSubview(refreshControl!)
+        var refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        appsTableView!.addSubview(refreshControl)
         self.navigationItem.title = "SMUfood"
     }
     
@@ -68,8 +69,8 @@ class ViewController: UITableViewController {
             }
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.tableView.reloadData()
-                self.refreshControl!.endRefreshing()
+                self.appsTableView!.reloadData()
+                //elf.appsTableView.refreshControl.endRefreshing()
             })
             
         }
@@ -82,7 +83,7 @@ class ViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurants.count
     }
     
@@ -96,7 +97,7 @@ class ViewController: UITableViewController {
     }
     
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         //var cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
         var cell = tableView.dequeueReusableCellWithIdentifier("MyTestCell") as RestaurantCell
@@ -105,7 +106,7 @@ class ViewController: UITableViewController {
         if (restaurants.count > 0)
         {
             var rowData = restaurants[indexPath.row]
-            self.tableView.rowHeight = 50;
+            tableView.rowHeight = 50;
             
             if (TimeHelper.almostClosed(rowData.restCloseParsed)) {
                 cell.hoursLabel!.textColor = UIColor.redColor()
