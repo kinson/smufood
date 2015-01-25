@@ -11,13 +11,20 @@ import Foundation
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet var appsTableView : UITableView?
+    var appsTableView : UITableView?
     var restaurants = [Restaurant]()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.whiteColor()
+        appsTableView = UITableView(frame: CGRect(x: 0, y: 10, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height))
+        appsTableView!.dataSource = self
+        appsTableView!.delegate = self
+        appsTableView!.registerClass(DiningCell.classForCoder(), forCellReuseIdentifier: "DiningCell")
+        appsTableView!.allowsSelection = false
+        self.view.addSubview(appsTableView!)
         var refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         appsTableView!.addSubview(refreshControl)
@@ -70,7 +77,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.appsTableView!.reloadData()
-                //elf.appsTableView.refreshControl.endRefreshing()
             })
             
         }
@@ -99,8 +105,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        //var cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
-        var cell = tableView.dequeueReusableCellWithIdentifier("MyTestCell") as RestaurantCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("DiningCell", forIndexPath: indexPath) as DiningCell
+        //let cell = DiningCell(style: UITableViewCellStyle.Default, reuseIdentifier: "DiningCell")
+        
         
         //get dictionary for individual row
         if (restaurants.count > 0)
@@ -109,15 +116,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             tableView.rowHeight = 50;
             
             if (TimeHelper.almostClosed(rowData.restCloseParsed)) {
-                cell.hoursLabel!.textColor = UIColor.redColor()
+                cell.hoursLabel?.textColor = UIColor.redColor()
             }
             else {
-                cell.hoursLabel!.textColor = UIColor.blackColor()
+                cell.hoursLabel?.textColor = UIColor.blackColor()
             }
-            cell.hoursLabel!.text = "Until " + rowData.restClose
-            cell.nameLabel!.text = rowData.realName
-            cell.nameLabel!.sizeToFit()
-
+            cell.hoursLabel?.text = "Until " + rowData.restClose
+            cell.hoursLabel?.sizeToFit()
+            cell.nameLabel?.text = rowData.realName
+            cell.nameLabel?.sizeToFit()
+            println(rowData.realName + " " + rowData.restClose)
         }
         
         return cell

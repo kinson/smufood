@@ -5,8 +5,8 @@
     <description>A single-page template for Jekyll based blogs (like what you&#39;d use on github pages!)</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Nov 2014 20:03:53 -0600</pubDate>
-    <lastBuildDate>Tue, 11 Nov 2014 20:03:53 -0600</lastBuildDate>
+    <pubDate>Sun, 25 Jan 2015 14:06:08 -0600</pubDate>
+    <lastBuildDate>Sun, 25 Jan 2015 14:06:08 -0600</lastBuildDate>
     <generator>Jekyll v2.5.1</generator>
     
       <item>
@@ -34,7 +34,7 @@
         <title>App</title>
         <description>&lt;h1 id=&quot;smufood-application&quot;&gt;SMUfood Application&lt;/h1&gt;
 
-&lt;p&gt;The SMUfood ios app is coming soon the App store, where it will freely allow users to easily see when each restaurant is open.&lt;/p&gt;
+&lt;p&gt;The SMUfood ios app is ~~coming soon~~ now available on the App store, where it will freely allow users to easily see when each restaurant is open.&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/img/smufoodapppage2.png&quot; /&gt;&lt;/div&gt;
 </description>
@@ -49,7 +49,7 @@
         <title>home</title>
         <description>&lt;h2 id=&quot;smufood&quot;&gt;SMUfood!&lt;/h2&gt;
 &lt;div style=&quot;text-align:center&quot;&gt;&lt;img height=&quot;350&quot; width=&quot;350&quot; src=&quot;/img/smufoodbiglogonobg.gif&quot; /&gt;&lt;/div&gt;
-&lt;p&gt;SMUfood is an app that changes how you interact with campus dining at SMU. A 2014 &lt;a href=&quot;http://www.smu.edu/provost/bigideas&quot;&gt;Big iDeas&lt;/a&gt; grant winner, SMUfood is a work in progress.&lt;/p&gt;
+&lt;p&gt;SMUfood is an app that changes how you interact with campus dining at SMU. A 2014 &lt;a href=&quot;http://www.smu.edu/provost/bigideas&quot;&gt;Big iDeas&lt;/a&gt; grant winner, SMUfood is ~~a work in progress~~ now available on the App Store.&lt;/p&gt;
 </description>
         <pubDate>Tue, 11 Nov 2014 00:00:00 -0600</pubDate>
         <link>/</link>
